@@ -29,6 +29,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { ModeloComponent } from './components/modelo/modelo.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactoComponent
+    ContactoComponent,
+    ModeloComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
