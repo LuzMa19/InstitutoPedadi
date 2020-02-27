@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 /*
 ██████  ██    ██ ████████  █████  ███████
@@ -8,7 +13,7 @@ import { NgModule } from '@angular/core';
 ██   ██ ██    ██    ██    ██   ██      ██
 ██   ██  ██████     ██    ██   ██ ███████
 */
-import {APP_ROUTING} from './app.routes';
+import { APP_ROUTING } from './app.routes';
 
 
 
@@ -31,6 +36,13 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ModeloComponent } from './components/modelo/modelo.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { NavbarAuthComponent } from './components/shared/navbar-auth/navbar-auth.component';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
+import { EditarusuarioComponent } from './components/editarusuario/editarusuario.component';
+
 
 @NgModule({
   declarations: [
@@ -42,13 +54,23 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
     AboutComponent,
     ContactoComponent,
     ModeloComponent,
-    GaleriaComponent
+    RegistroComponent,
+    GaleriaComponent,
+    LoginComponent,
+    NavbarAuthComponent,
+    BienvenidaComponent,
+    EditarusuarioComponent
+
   ],
   imports: [
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

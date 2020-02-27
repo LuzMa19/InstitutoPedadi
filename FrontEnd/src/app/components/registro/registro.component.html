@@ -1,0 +1,126 @@
+<app-navbar-auth></app-navbar-auth>
+
+<!--
+<div class="wrapper">
+  <!--
+      ███    ███ ███████ ███    ██ ██    ██     ██       █████  ████████ ███████ ██████   █████  ██
+      ████  ████ ██      ████   ██ ██    ██     ██      ██   ██    ██    ██      ██   ██ ██   ██ ██
+      ██ ████ ██ █████   ██ ██  ██ ██    ██     ██      ███████    ██    █████   ██████  ███████ ██
+      ██  ██  ██ ██      ██  ██ ██ ██    ██     ██      ██   ██    ██    ██      ██   ██ ██   ██ ██
+      ██      ██ ███████ ██   ████  ██████      ███████ ██   ██    ██    ███████ ██   ██ ██   ██ ███████
+
+  <nav id="sidebar">
+    <ul class="list-unstyled components">
+
+      <li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Usuarios</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+          <li>
+            <a href="/registro">Registro</a>
+          </li>
+          <li>
+            <a href="/EditarUsuario">Editar Usuario</a>
+          </li>
+
+        </ul>
+      </li>
+
+
+      <li>
+        <a href="#">Servicios</a>
+      </li>
+      <li>
+        <a href="#">Abonos</a>
+      </li>
+      <li>
+        <a href="#">Ventas</a>
+      </li>
+    </ul>
+  </nav>
+    -->
+
+  <!--
+  ███████  ██████  ██████  ███    ███ ██    ██ ██       █████  ██████  ██  ██████      ██████  ███████     ██████  ███████  ██████  ██ ███████ ████████ ██████   ██████
+  ██      ██    ██ ██   ██ ████  ████ ██    ██ ██      ██   ██ ██   ██ ██ ██    ██     ██   ██ ██          ██   ██ ██      ██       ██ ██         ██    ██   ██ ██    ██
+  █████   ██    ██ ██████  ██ ████ ██ ██    ██ ██      ███████ ██████  ██ ██    ██     ██   ██ █████       ██████  █████   ██   ███ ██ ███████    ██    ██████  ██    ██
+  ██      ██    ██ ██   ██ ██  ██  ██ ██    ██ ██      ██   ██ ██   ██ ██ ██    ██     ██   ██ ██          ██   ██ ██      ██    ██ ██      ██    ██    ██   ██ ██    ██
+  ██       ██████  ██   ██ ██      ██  ██████  ███████ ██   ██ ██   ██ ██  ██████      ██████  ███████     ██   ██ ███████  ██████  ██ ███████    ██    ██   ██  ██████
+  -->
+
+  <div id="content">
+
+    <div class="signup-form">
+      <form [formGroup]=" this.usuarioService.myForm" (ngSubmit)="addUsuario()" class="form-horizontal">
+        <div class="col-xs-8 col-xs-offset-4">
+          <h2>Registro</h2>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Nombre</label>
+          <div class="col-xs-8">
+            <input formControlName="nombre" type="text" class="form-control" name="username" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Apellido Paterno</label>
+          <div class="col-xs-8">
+            <input formControlName="apellidopt" type="email" class="form-control" name="email" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Apellido Materno</label>
+          <div class="col-xs-8">
+            <input formControlName="apellidomt" type="text" class="form-control" name="password" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Edad</label>
+          <div class="col-xs-8">
+            <input formControlName="edad" type="text" class="form-control" name="password" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Ocupación</label>
+          <div class="col-xs-8">
+            <input formControlName="ocupacion" type="text" class="form-control" name="password" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Teléfono</label>
+          <div class="col-xs-8">
+            <input formControlName="telefono" type="text" class="form-control" name="confirm_password" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Correo Electrónico</label>
+          <div class="col-xs-8">
+            <input formControlName="correo" type="text" class="form-control" name="confirm_password" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Domicilio</label>
+          <div class="col-xs-8">
+            <input formControlName="domicilio" type="text" class="form-control" name="password" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4">Tipo de Usuario</label>
+          <div class="col-xs-8">
+            <select formControlName="tipo" class="form-control" name="Tipos">
+
+              <option>Tutor</option>
+
+              <option>Alumno</option>
+
+              <option>Administrador</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-4">
+            <button (clic)="addUsuario()" class="btn btn-primary btn-lg">Registrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>

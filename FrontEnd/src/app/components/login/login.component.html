@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../../assets/img/logo.png" id="icon" alt="User Icon">
+
+      <!--<img src="https://www.b-cube.in/wp-content/uploads/2014/05/aditya-300x177.jpg" id="icon" alt="User Icon" />-->
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input type="email" id="login" class="fadeIn second" name="login" placeholder="Usuario" required>
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" required>
+      <input type="submit" class="fadeIn fourth" value="Iniciar Sesion" >
+      <button type="button" name="button">jajha</button>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" [routerLink]="['home']">Ir al sitio principal</a>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,13 +1,76 @@
+
+.card{
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+.card img{
+  width: 300px;
+  height: 220px;
+}
+
+h5.card-title{
+  font-weight: 1000;
+}
+
+p.card-text{
+  color: black;
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.texto{
+  width: 40%;
+  display:inline-block;
+  vertical-align: middle;
+}
+
 h1.title{
   color: white;
-  font-size: 60px;
+  font-size: 100px;
+  font-weight: 700;
 
 }
 p.subtitle{
   color:white;
 }
 h3.mision{
-  color:blue;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+h2.bienvenida{
+  color:#152F4F;
+  font-size: 45px;
+  font-weight: 700;
+}
+h2.niveles{
+  color:black ;
+  font-size: 45px;
+  font-weight: 700;
+}
+h3.bienvenida{
+  color:#152F4F;
   font-size: 30px;
+  font-weight: 700;
+}
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
 
+.circulo{
+  width: 200px;
+  height: 200PX;
+  border-radius: 100%;
 }

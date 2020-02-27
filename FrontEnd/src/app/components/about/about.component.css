@@ -1,0 +1,13 @@
+.jumbotron{
+  width: auto;
+  height: auto;
+}
+h3.mision{
+  color:blue;
+  font-size: 30px;
+}
+h2.bienvenida{
+  color:#152F4F;
+  font-size: 50px;
+  font-weight: 700;
+}
