@@ -1,0 +1,109 @@
+<app-navbar-auth></app-navbar-auth>
+
+
+<div id="content">
+
+  <div class="signup-form">
+    <form [formGroup]=" this.alumnoService.myForm" (ngSubmit)="addAlumno()" class="form-horizontal">
+      <div class="col-xs-8 col-xs-offset-4">
+        <h2>Registrar Alumno</h2>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Nombre</label>
+        <div class="col-xs-8">
+          <input formControlName="nombre" type="text" class="form-control" name="username" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Apellido Paterno</label>
+        <div class="col-xs-8">
+          <input formControlName="apellidopt" type="email" class="form-control" name="email" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Apellido Materno</label>
+        <div class="col-xs-8">
+          <input formControlName="apellidomt" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Curp</label>
+        <div class="col-xs-8">
+          <input formControlName="curp" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Edad</label>
+        <div class="col-xs-8">
+          <input formControlName="edad" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Sexo</label>
+        <div class="col-xs-8">
+          <input formControlName="sexo" type="text" class="form-control" name="confirm_password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Fecha de nacimiento</label>
+        <div class="col-xs-8">
+          <input formControlName="fechan" type="text" class="form-control" name="confirm_password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Escuela de procedencia</label>
+        <div class="col-xs-8">
+          <input formControlName="escuela" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Sala/Grado</label>
+        <div class="col-xs-8">
+          <input formControlName="grado" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Alergias</label>
+        <div class="col-xs-8">
+          <input formControlName="alergias" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Cuidados especiales</label>
+        <div class="col-xs-8">
+          <input formControlName="cuidado" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Grupo sanguíneo</label>
+        <div class="col-xs-8">
+          <input formControlName="sanguineo" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Domicilio</label>
+        <div class="col-xs-8">
+          <input formControlName="domicilio" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Teléfono de emergencia</label>
+        <div class="col-xs-8">
+          <input formControlName="telefono" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Fecha de inscripción</label>
+        <div class="col-xs-8">
+          <input formControlName="fecha" type="text" class="form-control" name="password" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-8 col-xs-offset-4">
+          <button (clic)="addUsuario()" class="btn btn-primary btn-lg">Registrar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

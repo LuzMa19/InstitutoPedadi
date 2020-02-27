@@ -52,7 +52,7 @@
     <div class="signup-form">
       <form [formGroup]=" this.usuarioService.myForm" (ngSubmit)="addUsuario()" class="form-horizontal">
         <div class="col-xs-8 col-xs-offset-4">
-          <h2>Registro</h2>
+          <h2>Registrar Usuario</h2>
         </div>
         <div class="form-group">
           <label class="control-label col-xs-4">Nombre</label>
@@ -108,8 +108,6 @@
             <select formControlName="tipo" class="form-control" name="Tipos">
 
               <option>Tutor</option>
-
-              <option>Alumno</option>
 
               <option>Administrador</option>
             </select>

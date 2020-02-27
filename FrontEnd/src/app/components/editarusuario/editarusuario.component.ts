@@ -56,6 +56,10 @@ export class EditarusuarioComponent implements OnInit {
     this.usuarioService.updateUsers(data, this.idUsuario);
     this.FormUpdate.reset();
   }
+  borrarUsuario(){
+   //borrarUsuario
+   this.usuarioService.deleteUser(this.idUsuario);
+ }
 
   constructor(private usuarioService: UsuarioService) {
     this.usuarioService.getUsers().subscribe(list => {

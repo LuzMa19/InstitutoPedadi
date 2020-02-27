@@ -1,0 +1,19 @@
+export class AlumnoModel {
+  id:'string';
+  nombre:'string';
+  apellidopt:'string';
+  apellidomt:'string';
+  curp:'string';
+  edad:'number';
+  sexo:'string';
+  fechan:'fecha';
+  lugar:'string';
+  escuela:'string';
+  grado:'string';
+  alergias:'string';
+  cuidado:'string';
+  sanguineo:'string';
+  domicilio:'string';
+  telefono:'string';
+  fecha:'fecha';
+}

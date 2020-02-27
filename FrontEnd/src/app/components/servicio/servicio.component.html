@@ -1,0 +1,45 @@
+<app-navbar-auth></app-navbar-auth>
+
+<div id="content">
+
+  <div class="signup-form">
+    <form [formGroup]=" this.servicioService.myForm" (ngSubmit)="addServicio()" class="form-horizontal">
+      <div class="col-xs-8 col-xs-offset-4">
+        <h2>Registrar servicio</h2>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Descripción</label>
+        <div class="col-xs-8">
+          <input formControlName="descripcion" type="text" class="form-control" name="username" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Costo</label>
+        <div class="col-xs-8">
+          <input formControlName="costo" type="email" class="form-control" name="email" required="required">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-xs-4">Tipo de servicio</label>
+        <div class="col-xs-8">
+          <select formControlName="tipo" class="form-control" name="Tipos">
+
+            <option>Inscripción</option>
+            <option>Colegiatura</option>
+            <option>Uniforme</option>
+            <option>Curso</option>
+            <option>Taller</option>
+            <option>Alimento</option>
+            <option>Transporte</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-8 col-xs-offset-4">
+          <button (clic)="addServicio()" class="btn btn-primary btn-lg">Registrar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

@@ -42,6 +42,8 @@ import { NavbarAuthComponent } from './components/shared/navbar-auth/navbar-auth
 import { AngularFirestore } from '@angular/fire/firestore';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { EditarusuarioComponent } from './components/editarusuario/editarusuario.component';
+import { RegistroalumnoComponent } from './components/registroalumno/registroalumno.component';
+import { ServicioComponent } from './components/servicio/servicio.component';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { EditarusuarioComponent } from './components/editarusuario/editarusuario
     LoginComponent,
     NavbarAuthComponent,
     BienvenidaComponent,
-    EditarusuarioComponent
+    EditarusuarioComponent,
+    RegistroalumnoComponent,
+    ServicioComponent
 
   ],
   imports: [

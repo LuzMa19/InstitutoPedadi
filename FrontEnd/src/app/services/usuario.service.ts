@@ -25,7 +25,7 @@ export class UsuarioService {
   }
 
 
-
+//recibedatosform
 
   myForm = new FormGroup({
     nombre: new FormControl(''),
