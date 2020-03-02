@@ -32,18 +32,18 @@ export class ServicioService {
     return this.servicios;
   }
 
-  getUser(id:string){
+  getServicio(id:string){
     return this.ServiciosColletion.doc(id).valueChanges();
 
   }
-  updateUsers(servicio: any , id: string) {
+  updateServicio(servicio: any , id: string) {
     return this.ServiciosColletion.doc(id).update(servicio)
   }
 
-  deleteUser(id: string){
+  deleteServicio(id: string){
     return this.ServiciosColletion.doc(id).delete();
   }
-  createUser(servicio: any){
+  createServicio(servicio: any){
     return this.ServiciosColletion.add(servicio);
   }
 

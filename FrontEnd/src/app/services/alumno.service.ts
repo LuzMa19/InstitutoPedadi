@@ -9,6 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   providedIn: 'root'
 })
 export class AlumnoService {
+
   private AlumnoCollection: AngularFirestoreCollection<any>;
   alumnos: Observable<any[]>;
   constructor(private readonly afs: AngularFirestore) {

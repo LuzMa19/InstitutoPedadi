@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -7,7 +7,12 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './editarusuario.component.html',
   styleUrls: ['./editarusuario.component.css']
 })
+
 export class EditarusuarioComponent implements OnInit {
+  @ViewChild('closebutton') closebutton;
+  cerrarModal(){
+    this.closebutton.nativeElement.click();
+  }
   dataUsers: any;
   dataUser: any;
   idUsuario:any;
@@ -45,6 +50,16 @@ export class EditarusuarioComponent implements OnInit {
 
     });
    }
+
+   buscarUsuarioeliminar(id: any) {
+     console.log('el id es;', id)
+     this.usuarioService.getUser(id).subscribe(list => {
+       this.dataUser = list
+       this.idUsuario = id;
+     });
+     }
+
+
    actualizarUsuario(){
     console.log(this.FormUpdate.value)
     let data = this.FormUpdate.value;
@@ -55,10 +70,14 @@ export class EditarusuarioComponent implements OnInit {
     //actualizarUsuario
     this.usuarioService.updateUsers(data, this.idUsuario);
     this.FormUpdate.reset();
+    this.cerrarModal();
   }
   borrarUsuario(){
    //borrarUsuario
+   //console.log('borrado',this.idUsuario)
    this.usuarioService.deleteUser(this.idUsuario);
+   this.idUsuario="";
+
  }
 
   constructor(private usuarioService: UsuarioService) {

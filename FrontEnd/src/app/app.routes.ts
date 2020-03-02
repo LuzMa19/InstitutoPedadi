@@ -5,11 +5,14 @@ import {ContactoComponent} from './components/contacto/contacto.component';
 import {ModeloComponent} from './components/modelo/modelo.component';
 import {GaleriaComponent} from './components/galeria/galeria.component';
 import {LoginComponent} from './components/login/login.component';
-import {RegistroComponent} from './components/registro/registro.component';
-import {EditarusuarioComponent} from './components/editarusuario/editarusuario.component';
 import {BienvenidaComponent} from './components/bienvenida/bienvenida.component';
-import  {RegistroalumnoComponent} from './components/registroalumno/registroalumno.component';
+import {RegistroComponent} from './components/registro/registro.component';
+import {RegistroalumnoComponent} from './components/registroalumno/registroalumno.component';
 import {ServicioComponent} from './components/servicio/servicio.component';
+import {EditarusuarioComponent} from './components/editarusuario/editarusuario.component';
+import {EditaralumnoComponent} from './components/editaralumno/editaralumno.component';
+import {EditarservicioComponent} from './components/editarservicio/editarservicio.component';
+
 
 
 const APP_ROUTES: Routes = [
@@ -22,6 +25,8 @@ const APP_ROUTES: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'bienvenida', component: BienvenidaComponent },
   { path: 'edicion', component: EditarusuarioComponent },
+  { path: 'edicionalumno', component: EditaralumnoComponent },
+  { path: 'edicionservicio', component: EditarservicioComponent },
   { path: 'registroalumno', component: RegistroalumnoComponent },
   { path: 'servicio', component: ServicioComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'home' }

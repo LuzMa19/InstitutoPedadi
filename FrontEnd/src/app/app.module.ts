@@ -44,6 +44,8 @@ import { BienvenidaComponent } from './components/bienvenida/bienvenida.componen
 import { EditarusuarioComponent } from './components/editarusuario/editarusuario.component';
 import { RegistroalumnoComponent } from './components/registroalumno/registroalumno.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
+import { EditaralumnoComponent } from './components/editaralumno/editaralumno.component';
+import { EditarservicioComponent } from './components/editarservicio/editarservicio.component';
 
 
 @NgModule({
@@ -63,7 +65,9 @@ import { ServicioComponent } from './components/servicio/servicio.component';
     BienvenidaComponent,
     EditarusuarioComponent,
     RegistroalumnoComponent,
-    ServicioComponent
+    ServicioComponent,
+    EditaralumnoComponent,
+    EditarservicioComponent
 
   ],
   imports: [

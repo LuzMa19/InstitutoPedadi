@@ -12,12 +12,12 @@ export class ServicioComponent implements OnInit {
 
    }
    addServicio(){
-    console.log("Hola");
+
     console.log(this.servicioService.myForm.value)
     let data = this.servicioService.myForm.value;
-    data.contrasenia=12345;
+
     //insercion a la base de datos
-    this.servicioService.createUser(data);
+    this.servicioService.createServicio(data);
     this.servicioService.myForm.reset();
   }
 
