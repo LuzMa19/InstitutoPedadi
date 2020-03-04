@@ -9,10 +9,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 
 export class EditarservicioComponent implements OnInit {
-  @ViewChild('closebutton') closebutton;
-  cerrarModal(){
-    this.closebutton.nativeElement.click();
-  }
+  //@ViewChild('closebutton') closebutton;
+  //cerrarModal(){
+  //  this.closebutton.nativeElement.click();
+//  }
   dataServicios: any;
   dataServicio: any;
   idServicio:any;
@@ -58,7 +58,7 @@ export class EditarservicioComponent implements OnInit {
     //actualizarUsuario
     this.servicioService.updateServicio(data, this.idServicio);
     this.FormUpdate.reset();
-    this.cerrarModal();
+    //this.cerrarModal();
   }
   borrarServicio(){
    //borrarUsuario

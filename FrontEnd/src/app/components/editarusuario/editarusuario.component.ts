@@ -9,10 +9,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 
 export class EditarusuarioComponent implements OnInit {
-  @ViewChild('closebutton') closebutton;
-  cerrarModal(){
-    this.closebutton.nativeElement.click();
-  }
+  //@ViewChild('closebutton') closebutton;
+  //cerrarModal(){
+    //this.closebutton.nativeElement.click();
+  //}
   dataUsers: any;
   dataUser: any;
   idUsuario:any;
@@ -24,6 +24,7 @@ export class EditarusuarioComponent implements OnInit {
     correo: new FormControl(''),
     tipo: new FormControl(''),
     edad:new FormControl(''),
+    fechan:new FormControl(''),
     ocupacion:new FormControl(''),
     domicilio:new FormControl(''),
   });
@@ -44,6 +45,7 @@ export class EditarusuarioComponent implements OnInit {
         correo: new FormControl(this.dataUser.correo),
         tipo: new FormControl(this.dataUser.tipo),
         edad:new FormControl(this.dataUser.edad),
+        fechan:new FormControl(this.dataUser.fechan),
         ocupacion:new FormControl(this.dataUser.ocupacion),
         domicilio:new FormControl(this.dataUser.domicilio),
       })
@@ -70,7 +72,7 @@ export class EditarusuarioComponent implements OnInit {
     //actualizarUsuario
     this.usuarioService.updateUsers(data, this.idUsuario);
     this.FormUpdate.reset();
-    this.cerrarModal();
+    //this.cerrarModal();
   }
   borrarUsuario(){
    //borrarUsuario

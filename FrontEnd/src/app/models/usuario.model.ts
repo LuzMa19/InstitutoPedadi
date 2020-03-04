@@ -8,6 +8,7 @@ export class UsuarioModel {
   tipo:'string';
   contrasenia:'string';
   edad:'number';
+  fechan:'number';
   ocupacion:'string';
   domicilio:'string';
 }

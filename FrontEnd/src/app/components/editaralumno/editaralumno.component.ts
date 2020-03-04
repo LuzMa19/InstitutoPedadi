@@ -10,10 +10,10 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 
 export class EditaralumnoComponent implements OnInit {
 //Esto oculta el modal
-  @ViewChild('closebutton') closebutton;
-  cerrarModal(){
-    this.closebutton.nativeElement.click();
-  }
+  //@ViewChild('closebutton') closebutton;
+  //cerrarModal(){
+    //this.closebutton.nativeElement.click();
+  //}
 
   // solo eso
   dataAlumnos: any;
@@ -87,7 +87,7 @@ export class EditaralumnoComponent implements OnInit {
     //actualizarUsuario
     this.alumnoService.updateAlumnos(data, this.idAlumno);
     this.FormUpdate.reset();
-    this.cerrarModal();
+    //this.cerrarModal();
   }
 
 

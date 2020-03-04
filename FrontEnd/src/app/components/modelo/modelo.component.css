@@ -1,0 +1,26 @@
+
+h3.mision{
+  color:#36358C;
+  font-size: 45px;
+  font-weight: 500;
+}
+h3.mision1{
+  color:#000;
+  font-size: 40px;
+  font-weight: 500;
+}
+h2.bienvenida{
+  color:#152F4F;
+  font-size: 20px;
+  font-weight: 700;
+}
+.card{
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+}
+.card img{
+  width: 200px;
+  display: flex;
+  margin: 0 auto;
+}

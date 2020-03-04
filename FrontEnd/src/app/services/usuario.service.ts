@@ -36,6 +36,7 @@ export class UsuarioService {
     tipo: new FormControl(''),
     contrasenia: new FormControl(''),
     edad:new FormControl(''),
+    fechan:new FormControl(''),
     ocupacion:new FormControl(''),
     domicilio:new FormControl(''),
   })
