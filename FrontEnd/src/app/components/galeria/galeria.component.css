@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
+hr {
+  border: 2px solid #8AAC27;
+   height: 2px;
+}
+
 :root {
 	/* Base font size */
 	font-size: 10px;

@@ -12,6 +12,8 @@ import {ServicioComponent} from './components/servicio/servicio.component';
 import {EditarusuarioComponent} from './components/editarusuario/editarusuario.component';
 import {EditaralumnoComponent} from './components/editaralumno/editaralumno.component';
 import {EditarservicioComponent} from './components/editarservicio/editarservicio.component';
+import {AdmisionComponent} from './components/admision/admision.component';
+
 
 
 
@@ -29,6 +31,10 @@ const APP_ROUTES: Routes = [
   { path: 'edicionservicio', component: EditarservicioComponent },
   { path: 'registroalumno', component: RegistroalumnoComponent },
   { path: 'servicio', component: ServicioComponent},
+  { path: 'admision', component: AdmisionComponent},
+  { path: 'admision/:id', component: AdmisionComponent},
+
+
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

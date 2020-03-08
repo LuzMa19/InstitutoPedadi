@@ -1,0 +1,31 @@
+.jumbotron{
+  width: auto;
+  height: 300px;
+}
+.img-fluid{
+width: 400px;
+height: auto;
+border-radius: 8px;
+}
+h2.bienvenida{
+  color:#152F4F;
+  font-size: 45px;
+  font-weight: 700;
+  font-style: normal;
+}
+h1{
+font-size: 40px;
+}
+h3{
+font-size: 30px;
+}
+img.carruselimg{
+  filter: blur(3px);
+
+  /* opacity: 0.9; see the background through the hbox */
+}
+
+hr {
+  border: 2px solid #8AAC27;
+   height: 2px;
+  width: 100%;}

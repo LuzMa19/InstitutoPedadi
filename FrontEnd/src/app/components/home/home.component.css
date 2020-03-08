@@ -83,3 +83,7 @@ h2.modelo{
   height: 300PX;
   border-radius: 100%;
 }
+hr {
+  border: 3px solid #8AAC27;
+   height: 2px;
+  }

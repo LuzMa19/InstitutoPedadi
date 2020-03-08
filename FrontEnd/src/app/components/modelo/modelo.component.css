@@ -24,3 +24,7 @@ h2.bienvenida{
   display: flex;
   margin: 0 auto;
 }
+hr {
+  border: 2px solid #8AAC27;
+   height: 2px;
+  }

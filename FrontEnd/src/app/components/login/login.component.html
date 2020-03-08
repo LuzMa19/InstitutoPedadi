@@ -12,11 +12,10 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="email" id="login" class="fadeIn second" name="login" placeholder="Usuario" required>
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" required>
-      <input type="submit" class="fadeIn fourth" value="Iniciar Sesion" >
-      <button type="button" name="button">jajha</button>
+    <form [formGroup]="this.usuarioService.myForm" (ngSubmit)="buscarUsuario()" class="form-horizontal">
+      <input formControlName="telefono" type="email" class="fadeIn second" name="login" placeholder="Usuario" >
+      <input formControlName="contrasenia" type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" required>
+      <button (clic)="buscarUsuario()" class="fadeIn fourth" type="button" name="button">jajha</button>
     </form>
 
     <!-- Remind Passowrd -->

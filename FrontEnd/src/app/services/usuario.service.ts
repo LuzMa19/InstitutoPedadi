@@ -49,6 +49,10 @@ export class UsuarioService {
     return this.UsersCollection.doc(id).valueChanges();
 
  }
+ getUserlogin(telefono:string){
+   return this.UsersCollection.doc(telefono).valueChanges();
+
+}
   updateUsers(user: any , id: string) {
     return this.UsersCollection.doc(id).update(user)
   }

@@ -46,6 +46,7 @@ import { RegistroalumnoComponent } from './components/registroalumno/registroalu
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { EditaralumnoComponent } from './components/editaralumno/editaralumno.component';
 import { EditarservicioComponent } from './components/editarservicio/editarservicio.component';
+import { AdmisionComponent } from './components/admision/admision.component';
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { EditarservicioComponent } from './components/editarservicio/editarservi
     RegistroalumnoComponent,
     ServicioComponent,
     EditaralumnoComponent,
-    EditarservicioComponent
+    EditarservicioComponent,
+    AdmisionComponent
 
   ],
   imports: [
