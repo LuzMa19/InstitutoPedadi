@@ -1,4 +1,7 @@
-
+.jumbotron{
+  width: auto;
+  height: 300px;
+}
 h3.mision{
   color:#36358C;
   font-size: 45px;
@@ -17,10 +20,11 @@ h2.bienvenida{
 .card{
   border-radius: 8px;
   overflow: hidden;
-  margin: 10px;
+  margin: 5px;
 }
 .card img{
-  width: 200px;
+  width: 150px;
+  height: 150px;
   display: flex;
   margin: 0 auto;
 }

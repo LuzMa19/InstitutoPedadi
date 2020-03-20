@@ -27,6 +27,14 @@
         </div>
       </div>
       <div class="form-group">
+        <label class="control-label col-xs-4">Tutor</label>
+        <div class="col-xs-8">
+          <select formControlName="tutor" class="form-control" name="Tipos">
+            <option *ngFor="let users of dataUsers">{{users.nombre}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
         <label class="control-label col-xs-4">Curp</label>
         <div class="col-xs-8">
           <input formControlName="curp" type="text" class="form-control" name="password" required="required">

@@ -27,6 +27,7 @@ export class EditarusuarioComponent implements OnInit {
     fechan:new FormControl(''),
     ocupacion:new FormControl(''),
     domicilio:new FormControl(''),
+    contrasenia:new FormControl(''),
   });
 
 
@@ -48,6 +49,8 @@ export class EditarusuarioComponent implements OnInit {
         fechan:new FormControl(this.dataUser.fechan),
         ocupacion:new FormControl(this.dataUser.ocupacion),
         domicilio:new FormControl(this.dataUser.domicilio),
+        contrasenia:new FormControl(this.dataUser.contrasenia),
+
       })
 
     });

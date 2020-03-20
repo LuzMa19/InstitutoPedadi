@@ -13,7 +13,7 @@ import {EditarusuarioComponent} from './components/editarusuario/editarusuario.c
 import {EditaralumnoComponent} from './components/editaralumno/editaralumno.component';
 import {EditarservicioComponent} from './components/editarservicio/editarservicio.component';
 import {AdmisionComponent} from './components/admision/admision.component';
-
+import {VentasComponent} from './components/ventas/ventas.component';
 
 
 
@@ -33,6 +33,8 @@ const APP_ROUTES: Routes = [
   { path: 'servicio', component: ServicioComponent},
   { path: 'admision', component: AdmisionComponent},
   { path: 'admision/:id', component: AdmisionComponent},
+  { path: 'ventas', component: VentasComponent},
+
 
 
   { path: '**', pathMatch: 'full', redirectTo: 'home' }

@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlumnoService } from '../../services/alumno.service';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { UsuarioService } from '../../services/usuario.service';
+
 
 @Component({
   selector: 'app-editaralumno',
@@ -29,6 +31,7 @@ export class EditaralumnoComponent implements OnInit {
     sexo: new FormControl(''),
     lugar: new FormControl(''),
     escuela: new FormControl(''),
+    tutor:new FormControl(''),
     grado: new FormControl(''),
     alergias: new FormControl(''),
     cuidado: new FormControl(''),
@@ -57,6 +60,7 @@ export class EditaralumnoComponent implements OnInit {
         lugar: new FormControl(this.dataAlumno.lugar),
         escuela: new FormControl(this.dataAlumno.escuela),
         grado: new FormControl(this.dataAlumno.grado),
+        tutor:new FormControl(this.dataAlumno.tutor),
         alergias: new FormControl(this.dataAlumno.alergias),
         cuidado: new FormControl(this.dataAlumno.cuidado),
         sanguineo: new FormControl(this.dataAlumno.sanguineo),
@@ -99,7 +103,7 @@ export class EditaralumnoComponent implements OnInit {
 
  }
 
-  constructor(private alumnoService: AlumnoService) {
+  constructor(private alumnoService: AlumnoService, private usuarioService: UsuarioService) {
     this.alumnoService.getAlumnos().subscribe(list => {
       this.dataAlumnos = list;
       console.log(this.dataAlumnos);
@@ -113,6 +117,7 @@ export class EditaralumnoComponent implements OnInit {
 
 
   ngOnInit() {
+    
   }
 
 }

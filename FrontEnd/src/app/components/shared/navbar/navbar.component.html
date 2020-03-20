@@ -11,24 +11,31 @@
         <a class="navbar-brand" routerLink="/home">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="navbar-brand" routerLink="/about" >Nosotros</a>
+        <a class="navbar-brand" routerLink="/about">Nosotros</a>
       </li>
       <li class="nav-item">
         <a class="navbar-brand" routerLink="/modelo">Modelo Educativo</a>
       </li>
-      <li class="nav-item">
-        <a class="navbar-brand" routerLink="/admision">Admisión</a>
+      <li class="nav-item dropdown">
+        <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Admisión
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/admision','MATERNAL']">Maternal</a>
+          <a class="dropdown-item" [routerLink]="['/admision','PREESCOLAR']">Preescolar</a>
+          <a class="dropdown-item" [routerLink]="['/admision','PRIMARIA']">Primaria</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="navbar-brand" routerLink="/galeria">Galería</a>
       </li>
       <li class="nav-item">
-        <a class="navbar-brand" routerLink="/contacto" >Contáctanos</a>
+        <a class="navbar-brand" routerLink="/contacto">Contáctanos</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="btn btn-outline-light" href="/login">Iniciar Sesion</a>
+        <a class="btn btn-outline-light" href="/login">Iniciar Sesión</a>
       </li>
     </ul>
   </div>

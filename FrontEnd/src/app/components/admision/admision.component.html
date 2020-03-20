@@ -2,58 +2,58 @@
 <div class="jumbotron carruselimg" style="background-image: url(../../../assets/img/admision.jpg); background-size: 100%;">
 </div>
 
-
 <div class="container ">
   <div class="row">
     <div class="col-6">
       <h2 class="bienvenida"> {{Tipo}} </h2>
       <hr style="color: #0056b2;" size="1" width="75%" align="left"/>
       <h1>CICLO ESCOLAR 2020-2021 </h1>
-      <h3>Inscripciones abiertas todo el año!!!</h3>
+      <h3>Inscripciones abiertas</h3>
       <ul style="list-style-image:url(../../../assets/img/icon1.png);">
-        <li type="square">Horario: 07:30-18:00</li>
+        <li type="square">Horario: 07:30-16:00</li>
         <li type="square">Lunes a viernes</li>
-        <li type="square">Telefono: 951 211 6621</li>
+        <li type="square">Teléfono: 951 211 6621</li>
       </ul>
       <h3>Oferta educativa</h3>
-      <p>Nuestro programa académico promueve la adquisición gradual de diversas habilidades de desarrollo empresarial a las niñas y niños del Instituto Pedadi.</p>
-      <p>Adquieren habilidades como:</p>
+      <p>El Instituto Pedadi es un centro educativo de nivel básico ubicado en el estado de Oaxaca que ofrece los programas de educación  maternal, preescolar y primaria. Dentro de su oferta educativa cuenta con un programa de desarrollo empresarial para niños y niñas, el cual se cursa durante todo el ciclo escolar y tiene como finalidad desarrollar habilidades de emprendimiento, negocios, educación financiera, inteligencia emocional y consciencia ambiental, que de manera lúdica y sistemática coadyuven en la eliminación del ciclo de la pobreza, reduzcan las desigualdades, promuevan el trabajo decente y garanticen la equidad de género en las generaciones más jóvenes.</p>
+    <h3> Módulos</h3>
       <ul  style="list-style-image:url(../../../assets/img/icon1.png);">
-        <li type="square">Desarrollo emprendedor </li>
-        <li type="square">Creatividad</li>
-        <li type="square">Mercadotecnia y publicidad</li>
-        <li type="square">Ética y valores</li>
+        <li type="square">Lenguaje y comunicación</li>
+        <li type="square">Pensamiento matemático</li>
+        <li type="square">Exploración y comprensión del mundo natural y social</li>
+        <li type="square">Desarrollo artístico y creatividad</li>
+        <li type="square">Desarrollo socioemocional</li>
+        <li type="square">Desarrollo corporal y salud</li>
+        <li type="square">BusinessKids</li>
+        <li type="square">Inglés</li>
         <li type="square">Computación</li>
-        <li type="square">Ecología y cuidado del medioambiente</li>
+
       </ul>
-      <h3>Clases complementarias</h3>
+      <h3>Talleres extracurriculares</h3>
       <ul style="list-style-image:url(../../../assets/img/icon1.png);" >
-        <li type="square">Ingles</li>
-        <li type="square">Computación</li>
+        <li type="square">Futbol</li>
+        <li type="square">Natación</li>
+        <li type="square">Yoga</li>
+        <li type="square">Taekwondo</li>
       </ul>
-      <h3>Documentación</h3>
-      <ul style="list-style-image:url(../../../assets/img/icon1.png);">
-        <li type="square">Acta de nacimiento </li>
-        <li type="square">Comprobante de domicilio</li>
-        <li type="square">Curp</li>
-        <li type="square">Cartilla de vacunacion</li>
-        <li type="square">Certificado médico</li>
-        <li type="square">2 fotografías tamaño infantil</li>
 
-
-      </ul>
     </div>
-    <div class="col-6">
+    <div class="col-5 offset-md-1">
 
-      <img src="../../../assets/img/maternal1.png" class="img-fluid" alt="">
-      <br>
-      <br>
-      <img src="../../../assets/img/preescolar.png" class="img-fluid" alt="">
       <br>
       <br>
       <br>
       <br>
-      <img src="../../../assets/img/utvco.jpg" class="img-fluid" alt="">
+      <img *ngIf="Tipo == 'MATERNAL'" src="../../../assets/img/ad1.jpg" class="img-fluid" alt="">
+      <img *ngIf="Tipo == 'PREESCOLAR'" src="../../../assets/img/preescolar.png" class="img-fluid" alt="">
+      <img *ngIf="Tipo == 'PRIMARIA'" src="../../../assets/img/ad5.jpg" class="img-fluid" alt="">
+      <br>
+      <br>
+      <img *ngIf="Tipo == 'MATERNAL'" src="../../../assets/img/ga2.jpg" class="img-fluid" alt="">
+      <img *ngIf="Tipo == 'PREESCOLAR'" src="../../../assets/img/ad4.jpg" class="img-fluid" alt="">
+      <img *ngIf="Tipo == 'PRIMARIA'" src="../../../assets/img/ad6.jpg" class="img-fluid" alt="">
+      <br>
+      <br>
 
     </div>
   </div>

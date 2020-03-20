@@ -1,0 +1,58 @@
+<app-navbar-auth></app-navbar-auth>
+
+
+
+<div class="signup-form">
+  <form [formGroup]=" this.usuarioService.myForm" (ngSubmit)="addUsuario()" class="form-horizontal">
+    <div class="col-xs-8 col-xs-offset-4">
+      <h2>Ventas</h2>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-4">Tutor</label>
+      <div class="col-xs-8">
+        <select formControlName="tipo" class="form-control" name="Tipos" (change)="busquedaHijo($)">
+          <option *ngFor="let users of dataUsers">{{users.nombre}}</option>
+
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-4">Alumno</label>
+      <div class="col-xs-8">
+        <select formControlName="tipo" class="form-control" name="Tipos">
+          <option *ngFor="let alumnos of dataAlumnos">{{alumnos.nombre}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-4">Tipo de Servicio</label>
+      <div class="col-xs-8">
+        <select formControlName="tipo" class="form-control" name="Tipos">
+          <option *ngFor="let servicios of dataServicios">{{servicios.tipo}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-4">Servicio</label>
+      <div class="col-xs-8">
+        <select formControlName="tipo" class="form-control" name="Tipos">
+          <option>Tutor</option>
+          <option>Administrador</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-xs-4">Cantidad</label>
+      <div class="col-xs-8">
+        <div class="col-xs-8">
+          <input formControlName="cantidad" type="number" class="form-control" name="username" required="required">
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-8 col-xs-offset-4">
+        <button (clic)="addUsuario()" class="btn btn-primary btn-lg">Comprar</button>
+      </div>
+    </div>
+  </form>
+</div>

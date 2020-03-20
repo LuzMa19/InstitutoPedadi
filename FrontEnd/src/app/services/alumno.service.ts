@@ -37,6 +37,7 @@ myForm = new FormGroup({
   grado: new FormControl(''),
   alergias: new FormControl(''),
   cuidado: new FormControl(''),
+  tutor: new FormControl(''),
   sanguineo: new FormControl(''),
   domicilio: new FormControl(''),
   telefono: new FormControl(''),

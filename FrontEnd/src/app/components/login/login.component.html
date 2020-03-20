@@ -6,7 +6,7 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../../../assets/img/logo.png" id="icon" alt="User Icon">
+      <img src="../../../assets/img/logo.jpg" id="icon" alt="User Icon">
 
       <!--<img src="https://www.b-cube.in/wp-content/uploads/2014/05/aditya-300x177.jpg" id="icon" alt="User Icon" />-->
     </div>
@@ -15,7 +15,7 @@
     <form [formGroup]="this.usuarioService.myForm" (ngSubmit)="buscarUsuario()" class="form-horizontal">
       <input formControlName="telefono" type="email" class="fadeIn second" name="login" placeholder="Usuario" >
       <input formControlName="contrasenia" type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" required>
-      <button (clic)="buscarUsuario()" class="fadeIn fourth" type="button" name="button">jajha</button>
+      <button (clic)="buscarUsuario()" class="btn btn-primary btn-lg">Registrar</button>
     </form>
 
     <!-- Remind Passowrd -->

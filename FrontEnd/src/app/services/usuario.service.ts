@@ -53,6 +53,56 @@ export class UsuarioService {
    return this.UsersCollection.doc(telefono).valueChanges();
 
 }
+
+Login(telefono:string):Observable<any[]>{
+
+    return this.afs.collection<any>('users', ref=> {
+        let cursorQueryRef : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        //buscar nombre exacto:
+        cursorQueryRef = cursorQueryRef.where('telefono', '==', telefono);
+        //buscar letras iniciales:
+        //----Falta construir---------
+        return cursorQueryRef;
+    })
+    .snapshotChanges()
+    .pipe(
+        map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+        }))
+    );
+
+}
+
+
+busquedaTutor():Observable<any[]>{
+
+    return this.afs.collection<any>('users', ref=> {
+        let cursorQueryRef : firebase.firestore.CollectionReference | firebase.firestore.Query = ref;
+        //buscar nombre exacto:
+        cursorQueryRef = cursorQueryRef.where('tipo', '==', 'Tutor');
+        //buscar letras iniciales:
+        //----Falta construir---------
+        return cursorQueryRef;
+    })
+    .snapshotChanges()
+    .pipe(
+        map(actions => actions.map(a => {
+        const data = a.payload.doc.data() as any;
+        const id = a.payload.doc.id;
+        return { id, ...data };
+        }))
+    );
+
+}
+
+
+
+
+
+
+
   updateUsers(user: any , id: string) {
     return this.UsersCollection.doc(id).update(user)
   }
