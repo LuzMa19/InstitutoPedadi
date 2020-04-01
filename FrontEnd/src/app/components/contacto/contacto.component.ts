@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MessageService} from '../../services/message.service';
+declare let alertify: any;
 
 @Component({
   selector: 'app-contacto',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _MessageService: MessageService) { }
+
+  contactForm(form){
+    this._MessageService.sendMessage(form).subscribe(() => {
+      alertify.success('Formulario enviado correctamente')
+console.log(form);
+    })
+  }
+
 
   ngOnInit() {
   }

@@ -1,10 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+
+/*
+███████ ███████ ██████  ██    ██ ██  ██████ ██  ██████  ███████
+██      ██      ██   ██ ██    ██ ██ ██      ██ ██    ██ ██
+███████ █████   ██████  ██    ██ ██ ██      ██ ██    ██ ███████
+     ██ ██      ██   ██  ██  ██  ██ ██      ██ ██    ██      ██
+███████ ███████ ██   ██   ████   ██  ██████ ██  ██████  ███████
+*/
+
+import {MessageService} from '../app/services/message.service';
 
 /*
 ██████  ██    ██ ████████  █████  ███████
@@ -77,12 +88,15 @@ import { VentasComponent } from './components/ventas/ventas.component';
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     APP_ROUTING
   ],
-  providers: [AngularFirestore],
+  providers: [AngularFirestore,
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
