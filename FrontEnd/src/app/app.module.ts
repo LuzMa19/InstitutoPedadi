@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFirestoreModule} from '@angular/fire/firestore';
 
 /*
 ███████ ███████ ██████  ██    ██ ██  ██████ ██  ██████  ███████
@@ -16,7 +16,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
 */
 
 import {MessageService} from '../app/services/message.service';
-
+import {AboutService} from '../app/services/about.service';
 /*
 ██████  ██    ██ ████████  █████  ███████
 ██   ██ ██    ██    ██    ██   ██ ██
@@ -59,6 +59,7 @@ import { EditaralumnoComponent } from './components/editaralumno/editaralumno.co
 import { EditarservicioComponent } from './components/editarservicio/editarservicio.component';
 import { AdmisionComponent } from './components/admision/admision.component';
 import { VentasComponent } from './components/ventas/ventas.component';
+import { RegistroadminComponent } from './components/registroadmin/registroadmin.component';
 
 
 @NgModule({
@@ -82,7 +83,8 @@ import { VentasComponent } from './components/ventas/ventas.component';
     EditaralumnoComponent,
     EditarservicioComponent,
     AdmisionComponent,
-    VentasComponent
+    VentasComponent,
+    RegistroadminComponent
 
   ],
   imports: [
@@ -95,7 +97,8 @@ import { VentasComponent } from './components/ventas/ventas.component';
     APP_ROUTING
   ],
   providers: [AngularFirestore,
-    MessageService
+    MessageService,
+    AboutService
   ],
   bootstrap: [AppComponent]
 })

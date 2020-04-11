@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
-
 hr {
   border: 2px solid #8AAC27;
    height: 2px;
@@ -70,17 +68,14 @@ body {
 }
 
 /*
-
 The following rule will only run if your browser supports CSS grid.
-
 Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
-
 */
 
 @supports (display: grid) {
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 		grid-gap: 2rem;
 	}
 

@@ -14,30 +14,36 @@ import {EditaralumnoComponent} from './components/editaralumno/editaralumno.comp
 import {EditarservicioComponent} from './components/editarservicio/editarservicio.component';
 import {AdmisionComponent} from './components/admision/admision.component';
 import {VentasComponent} from './components/ventas/ventas.component';
+import {RegistroadminComponent} from './components/registroadmin/registroadmin.component';
+import { AuthGuard } from './guards/auth.guard';
+
 
 
 
 const APP_ROUTES: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'modelo', component: ModeloComponent },
-  { path: 'galeria', component: GaleriaComponent },
+  { path: 'Inicio', component: HomeComponent },
+  { path: 'Nosotros', component: AboutComponent },
+  { path: 'Modelo', component: ModeloComponent },
+  { path: 'Galeria', component: GaleriaComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'contacto', component: ContactoComponent },
-  { path: 'registro', component: RegistroComponent },
-  { path: 'bienvenida', component: BienvenidaComponent },
-  { path: 'edicion', component: EditarusuarioComponent },
-  { path: 'edicionalumno', component: EditaralumnoComponent },
-  { path: 'edicionservicio', component: EditarservicioComponent },
-  { path: 'registroalumno', component: RegistroalumnoComponent },
-  { path: 'servicio', component: ServicioComponent},
-  { path: 'admision', component: AdmisionComponent},
-  { path: 'admision/:id', component: AdmisionComponent},
-  { path: 'ventas', component: VentasComponent},
+  { path: 'Contacto', component: ContactoComponent },
+  { path: 'registro', component: RegistroComponent,canActivate: [AuthGuard]  },
+  { path: 'bienvenida', component: BienvenidaComponent,canActivate: [AuthGuard] },
+  { path: 'edicion', component: EditarusuarioComponent,canActivate: [AuthGuard] },
+  { path: 'edicionalumno', component: EditaralumnoComponent,canActivate: [AuthGuard] },
+  { path: 'edicionservicio', component: EditarservicioComponent,canActivate: [AuthGuard] },
+  { path: 'registroalumno', component: RegistroalumnoComponent,canActivate: [AuthGuard]},
+  { path: 'servicio', component: ServicioComponent,canActivate: [AuthGuard]},
+  { path: 'Admision', component: AdmisionComponent},
+  { path: 'Admision/:id', component: AdmisionComponent},
+  { path: 'ventas', component: VentasComponent,canActivate: [AuthGuard]},
+  { path: 'registroadmin', component: RegistroadminComponent,canActivate: [AuthGuard]},
+  { path: '', redirectTo: '/Inicio',pathMatch:'full' },
 
 
 
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+
+  { path: '**', pathMatch: 'full', redirectTo: 'Inicio' }
 ];
 
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, {scrollPositionRestoration: 'enabled'});

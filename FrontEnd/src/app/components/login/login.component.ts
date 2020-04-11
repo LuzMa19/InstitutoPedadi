@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UsuarioService } from '../../services/usuario.service';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Router} from '@angular/router';
+import { NgForm } from '@angular/forms';
+import {adminModel} from '../../models/admin.model';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+
 declare let alertify: any;
 @Component({
   selector: 'app-login',
@@ -9,56 +11,28 @@ declare let alertify: any;
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  dataUsers: any;
-  dataUser: any;
-  encontrado: number;
-  telefono: any;
-  FormUpdate = new FormGroup({
-    telefono: new FormControl(''),
-    contrasenia: new FormControl(''),
-  });
+usuario: adminModel;
 
 
-  buscarUsuario() {
-    let data = this.usuarioService.myForm.value;
-    console.log(data.telefono);
-    console.log(data.contrasenia);
-    this.usuarioService.Login(data.telefono).subscribe(list => {
-      this.dataUser = list;
-      if (this.dataUser.length == 0) {
-        alertify.error('El usuario ingresado no existe');
-      }else{
-        if(data.contrasenia == this.dataUser[0].contrasenia){
-          alertify.success('Logeado correctamente')
-          this.router.navigate(['/bienvenida']);
-        }
-        else{
-          alertify.error('La contraseña ingresada es incorrecta');
-
-        }
-
-      }
-    })
-
-
-    /*this.usuarioService.getUser(telefono).subscribe(list => {
-      this.dataUser = list
-      this.telefono = telefono;
-      console.log(this.dataUser);
-      this.FormUpdate = new FormGroup({
-        telefono: new FormControl(this.dataUser.telefono),
-        contrasenia: new FormControl(this.dataUser.contrasenia),
-      });
-
-
-    });
-    */
-  }
-  constructor(private usuarioService: UsuarioService,
-    private router: Router,
-) { }
+  constructor( private  auth: AuthService, private router: Router) { }
 
   ngOnInit() {
+    this.usuario = new adminModel();
+
+  }
+
+  login(form: NgForm) {
+    if(form.invalid){
+
+      return;
+    }
+this.auth.login ( this.usuario).subscribe( resp =>{
+alertify.success('Logeado correctamente');
+this.router.navigateByUrl('/bienvenida')
+
+}, err =>{
+    alertify.error('Error al inciar sesión' + ' '+ err.error.error.message);
+})
   }
 
 }

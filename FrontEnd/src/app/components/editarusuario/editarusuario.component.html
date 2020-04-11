@@ -152,8 +152,6 @@
               <div class="col-xs-8">
                 <select formControlName="tipo" type="text" class="form-control" name="username" [value]=dataUser?.tipo required="required">
                   <option>Tutor</option>
-                  <option>Persona autorizado</option>
-                  <option>Docente</option>
                   <option>Administrador</option>
                 </select>
               </div>
@@ -193,7 +191,7 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
         <button type="button" class="btn btn-primary" (click)="borrarUsuario()">Eliminar</button>
       </div>
     </div>

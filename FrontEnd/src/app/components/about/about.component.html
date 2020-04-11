@@ -1,7 +1,13 @@
 <app-navbar></app-navbar>
 
-<div class="jumbotron" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/pedadiA.jpg?alt=media&token=02dbac65-9e24-42fa-9dc7-e01b5bf7f4e2); background-size: 100%;">
-</div>
+<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+      <div class="carousel-inner">
+          <div>
+              <img src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/pedadiA.jpg?alt=media&token=02dbac65-9e24-42fa-9dc7-e01b5bf7f4e2" class="d-block w-100 responsiveImage" alt="Instituto PEDADI">
+          </div>
+      </div>
+  </div>
+
 
 <div class="container text-center mt-5">
   <h2 class="bienvenida">NUESTRA FILOSOFÍA</h2>
@@ -66,15 +72,15 @@
 ██  ██  ██   ██ ██   ██ ██
 ██   ██ ██   ██ ██   ██ ██
 -->
-      <div class="col-xs-12 col-sm-6 col-md-4">
+      <div *ngFor="let personal of pedadi" class="col-xs-12 col-sm-6 col-md-4">
         <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
           <div class="mainflip">
             <div class="frontside">
               <div class="card">
                 <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal1A.jpg?alt=media&token=68cafbd8-603e-4201-985f-01971095b785" alt="card image"></p>
-                  <h4 class="card-title">L.C.E. Karina Salinas Sánchez</h4>
-                  <p class="card-text">Directora General</p>
+                  <p><img class=" img-fluid" [src]="personal.imagen" alt="card image"></p>
+                  <h4 class="card-title"> {{personal.nombre}} </h4>
+                  <p class="card-text"> {{personal.puesto}} </p>
                   <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                 </div>
               </div>
@@ -82,7 +88,7 @@
             <div class="backside">
               <div class="card">
                 <div class="card-body text-center mt-4">
-                  <p class="card-text">Me dedico a impulsar una educación de calidad con enfoque empresarial para las generaciones infantiles y juveniles del estado de Oaxaca, dando el acompañamiento requerido para que los emprendedores logren alcanzar sus sueños y sean los gestores de un equilibrio social.</p>
+                  <p class="card-text"> {{personal.descripcion}} </p>
 
                 </div>
               </div>
@@ -91,256 +97,6 @@
         </div>
       </div>
 
-      <!--
-██   ██ ██  ██████  ██ ███    ██ ██  ██████
-██   ██ ██ ██       ██ ████   ██ ██ ██    ██
-███████ ██ ██   ███ ██ ██ ██  ██ ██ ██    ██
-██   ██ ██ ██    ██ ██ ██  ██ ██ ██ ██    ██
-██   ██ ██  ██████  ██ ██   ████ ██  ██████
--->
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal2A.jpg?alt=media&token=0603ef7d-005c-4768-9be5-2ff2f5f7f881" alt="card image"></p>
-                  <h4 class="card-title">L.C.E. Higinio Salinas Sánchez</h4>
-                  <p class="card-text">Director Nivel Primaria</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Los emprendedores son los agentes de cambio en una sociedad. Para ser emprendedor debes encontrar cual es tu pasión. Mi pasión, es formar a los nuevos lideres empresariales. Soy emprendedor para vivir en equilibrio.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--
-     ██  █████  ███████ ██ ██    ██ ███████
-     ██ ██   ██ ██      ██ ██    ██ ██
-     ██ ███████ ███████ ██ ██    ██ █████
-██   ██ ██   ██      ██ ██  ██  ██  ██
- █████  ██   ██ ███████ ██   ████   ███████
--->
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal3A.jpg?alt=media&token=1a0df693-1a9f-41f1-8cb9-4bd54a5f1869" alt="card image"></p>
-                  <h4 class="card-title">C.P. Jassive Maty Cruz Olayo</h4>
-                  <p class="card-text"> Jefa Depto. Servicios Escolares.</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Me gusta escuchar los deseos y necesidades de los padres de familia para poder ofrecer y diseñar un servicio educativo de excelencia, que brinden un estilo de vida confortable, que se adapte perfectamente a las necesidades de  cada familia.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--
-██      ██    ██  ██████ ██  █████
-██      ██    ██ ██      ██ ██   ██
-██      ██    ██ ██      ██ ███████
-██      ██    ██ ██      ██ ██   ██
-███████  ██████   ██████ ██ ██   ██
--->
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal4A.jpg?alt=media&token=2d934a8e-62d8-4fc2-9a61-6f8a14ecad06" alt="card image"></p>
-                  <h4 class="card-title">L.C.E. Lucía Cruz Reyes</h4>
-                  <p class="card-text">Docente</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Me desempeño de manera creativa, responsable y comprometida con mis estudiantes, conduciéndolos hacia un nuevo modelo educativo emprendedor y al desarrollo de los ODS.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--
-███████ ██   ██ ███████ ███    ██ ██    ██
-██      ██   ██ ██      ████   ██  ██  ██
-███████ ███████ █████   ██ ██  ██   ████
-     ██ ██   ██ ██      ██  ██ ██    ██
-███████ ██   ██ ███████ ██   ████    ██
--->
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal5A.jpg?alt=media&token=b5ce7b32-ead8-4a76-a6da-8b8ee1b4dee3" alt="card image"></p>
-                  <h4 class="card-title">L.C.E. Shenny Viridiana Pérez Robles</h4>
-                  <p class="card-text">Docente</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Soy una maestra que descubre, aprovecha e impulsa las potencialidades de cada estudiante para que sean grandes emprendedores, mediante un aprendizaje lúdico basado en el desarrollo de negocios.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--
-██████   ██████  ██   ██  █████  ███    ██  █████
-██   ██ ██    ██  ██ ██  ██   ██ ████   ██ ██   ██
-██████  ██    ██   ███   ███████ ██ ██  ██ ███████
-██   ██ ██    ██  ██ ██  ██   ██ ██  ██ ██ ██   ██
-██   ██  ██████  ██   ██ ██   ██ ██   ████ ██   ██
--->
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal6A.jpg?alt=media&token=2e1bf052-33a1-41e2-bfad-fe00a67ab2fb" alt="card image"></p>
-                  <h4 class="card-title">L.C.E. Roxana Mariela Reyes Villalobos</h4>
-                  <p class="card-text">Docente</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Soy una maestra comprometida con el tema del emprendimiento, conduciendo a mis estudiantes a un aprendizaje significactivo, formándolos como futuros emprendedores responsables con la sociedad y el ambiente.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- ./Team member -->
-      <!--
-███████ ██████  ██ ████████
-██      ██   ██ ██    ██
-█████   ██   ██ ██    ██
-██      ██   ██ ██    ██
-███████ ██████  ██    ██
--->
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal7A.jpg?alt=media&token=04a5e7fa-1344-4122-b4d9-8c787ec6adec" alt="card image"></p>
-                  <h4 class="card-title">L.C.E. Edith Vásquez Ramírez</h4>
-                  <p class="card-text">Docente</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Me dedico a impartir clases en educación básica, con un enfoque humanista y un compromiso personal, social y profesional, con el firme objetivo por mejorar la educación en nuestro estado y país.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--
- ██████  ██████  ███    ███ ██████  ██    ██ ████████  █████   ██████ ██  ██████  ███    ██
-██      ██    ██ ████  ████ ██   ██ ██    ██    ██    ██   ██ ██      ██ ██    ██ ████   ██
-██      ██    ██ ██ ████ ██ ██████  ██    ██    ██    ███████ ██      ██ ██    ██ ██ ██  ██
-██      ██    ██ ██  ██  ██ ██      ██    ██    ██    ██   ██ ██      ██ ██    ██ ██  ██ ██
- ██████  ██████  ██      ██ ██       ██████     ██    ██   ██  ██████ ██  ██████  ██   ████
--->
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal8A.jpg?alt=media&token=efdd12fa-8d27-4cac-bba9-8c5399e82ae0" alt="card image"></p>
-                  <h4 class="card-title">L.E.I. Victor E. Delgado Morales</h4>
-                  <p class="card-text">Docente de Inglés</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">soy un docente comprometido con la enseñanza-aprendizaje de una segunda lengua, respondiendo a las necesidades de los estudiantes, así como la sociedad. Siempre innovando la labor de la enseñanza en el área de inglés para hacer una clase más llamativa.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center">
-                  <p><img class=" img-fluid" src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/personal9A.jpg?alt=media&token=31353a96-50c6-43ef-991d-333028c2626c" alt="card image"></p>
-                  <h4 class="card-title">I.S.C. Liliana Soledad Santiago López </h4>
-                  <p class="card-text">Docente de Computación</p>
-                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-4">
-                  <p class="card-text">Como ingeniera en sistemas computacionales mi formación académica, humana y laboral se enfoca en a la enseñanza, desarrollo e implementación de herramientas digitales que permitan a las nuevas generaciones a desenvolverse en cualquier ámbito.</p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <!-- fIN MEMBER-->
 

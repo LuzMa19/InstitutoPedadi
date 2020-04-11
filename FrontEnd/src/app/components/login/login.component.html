@@ -6,21 +6,25 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../../../assets/img/logo.jpg" id="icon" alt="User Icon">
+      <img src="https://firebasestorage.googleapis.com/v0/b/bdinstitutopedadi.appspot.com/o/logo.jpg?alt=media&token=3ba2ed2f-11a0-4a78-9dca-6179b12af6ae" id="icon" alt="User Icon">
 
       <!--<img src="https://www.b-cube.in/wp-content/uploads/2014/05/aditya-300x177.jpg" id="icon" alt="User Icon" />-->
     </div>
 
     <!-- Login Form -->
-    <form [formGroup]="this.usuarioService.myForm" (ngSubmit)="buscarUsuario()" class="form-horizontal">
-      <input formControlName="telefono" type="email" class="fadeIn second" name="login" placeholder="Usuario" >
-      <input formControlName="contrasenia" type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña" required>
-      <button (clic)="buscarUsuario()" class="btn btn-primary btn-lg">Registrar</button>
+    <form  (ngSubmit)="login(f)" #f="ngForm" class="form-horizontal">
+
+      <span *ngIf="f.submitted && f.controls['email'].errors" class="text-danger">   Campo obligatorio</span>
+
+      <input [(ngModel)]="usuario.email" type="email" class="fadeIn second" name="email" placeholder="Correo" required email >
+      <span *ngIf="f.submitted && f.controls['password'].errors" class="text-danger">   Campo obligatorio</span>
+      <input [(ngModel)]="usuario.password" type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña" minlength="6"  required>
+      <button  class="btn btn-primary btn-lg">Ingresar</button>
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" [routerLink]="['home']">Ir al sitio principal</a>
+      <a class="underlineHover" [routerLink]="['Inicio']">Ir al sitio principal</a>
     </div>
 
   </div>

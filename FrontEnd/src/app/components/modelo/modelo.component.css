@@ -1,6 +1,6 @@
-.jumbotron{
-  width: auto;
-  height: 300px;
+.responsiveImage {
+    height: 100%;
+    max-height: 450px;
 }
 h3.mision{
   color:#36358C;
